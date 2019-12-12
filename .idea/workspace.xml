@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a696851-9b02-464e-889f-46c91a606581" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/javaCode/yourcart/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/config.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/DbConnection.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

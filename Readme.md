@@ -16,3 +16,4 @@
   với username và password theo database trong máy của mình
 
 - Run project
+- Để chạy chương trình với tài khoản admin (username: cuong1, password: 123456)
