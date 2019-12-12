@@ -11,4 +11,8 @@
 
     <img src="https://i.imgur.com/SlO0VTL.png">
 
+- Tạo file config.properties trong folder javaCode/yourcart như sau:
+  <img src="https://i.imgur.com/2ChNxcd.png">
+  với username và password theo database trong máy của mình
+
 - Run project
