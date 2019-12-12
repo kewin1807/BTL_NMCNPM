@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>mytags_library</short-name>
+  <uri>/WEB-INF/tlds/myTags_library</uri>
+  <tag>
+    <name>CartCategory</name>
+    <tag-class>javaCode.yourcart.customtag.CartCategoryTagHandler</tag-class>
+    <body-content>empty</body-content>
+  </tag>
+  <tag>
+    <name>SelectCategory</name>
+    <tag-class>javaCode.yourcart.customtag.SelectCategory</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>selectID</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+  </tag>
+</taglib>
