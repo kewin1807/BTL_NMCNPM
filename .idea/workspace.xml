@@ -10,17 +10,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/AddCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/AddCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/CartHandlerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/CartHandlerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/DeleteCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/DeleteCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/NumberOFCartsForUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/NumberOFCartsForUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Pay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Pay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/ReduceQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/ReduceQuantity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/increaseQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/increaseQuantity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/filter/CheckLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/filter/CheckLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/CartModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/CartModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/users.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/checkout.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/addtocart.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/addtocart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/profile.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +192,7 @@
       <workItem from="1576087609654" duration="106000" />
       <workItem from="1576136157225" duration="6888000" />
       <workItem from="1576162322371" duration="4958000" />
-      <workItem from="1576925164553" duration="8982000" />
+      <workItem from="1576925164553" duration="11289000" />
     </task>
     <servers />
   </component>

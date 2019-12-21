@@ -35,7 +35,6 @@
 
                         <c:forEach items="${requestScope.carts}" var="cart">
                             <tr>
-
                                 <td class="cart_product">
                                     <a href=""><img src="${cart.photo}" alt=""></a>
                                 </td>

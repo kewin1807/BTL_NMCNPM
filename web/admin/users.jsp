@@ -15,8 +15,6 @@
 <div class="col-sm-9 padding-right">
 
     <h2>Users</h2>
-
-
     <div class="table-responsive cart_info">
         <table class="table table-condensed">
             <thead>

@@ -35,7 +35,7 @@ public class AddCart extends HttpServlet {
         response.getWriter().print(cartModel.getNubmberOfCartsForUser());
         HttpSession session = request.getSession(true);
         session.setAttribute("carts", cartModel);
-        session.setMaxInactiveInterval(60 * 60 * 24);
+        session.setMaxInactiveInterval(60 * 60 * 48);
     }
 
 }

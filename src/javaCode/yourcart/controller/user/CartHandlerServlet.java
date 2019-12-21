@@ -15,10 +15,14 @@ import javaCode.yourcart.beans.CartProduct;
 
 @WebServlet("/CartHandlerServlet")
 public class CartHandlerServlet extends HttpServlet {
-
+    CartModel cartModel;
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        CartModel cartModel = (CartModel) request.getSession().getAttribute("carts");
+        if(request.getSession().getAttribute("carts")!=null){
+            cartModel = (CartModel) request.getSession().getAttribute("carts");
+        }
+        else {
+            cartModel = new CartModel();
+        }
         ArrayList<CartProduct> carts = cartModel.getProductFromCart();
         request.setAttribute("carts", carts);
         String nextJSP = "/checkout.jsp";

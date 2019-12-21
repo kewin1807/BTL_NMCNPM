@@ -39,27 +39,21 @@
                     <h2>${userInfo.userName}</h2>
                     <p>Account Setting</p>
                     <label>Name</label>
-                    <input type="text" placeholder="Name"  class="input-field"  id="editUserName" value="${userInfo.userName}" disabled required/>
+                    <input type="text" placeholder="Name"  class="input-field"  id="editUserName" value="${userInfo.userName}" disabled required readonly/>
                     <input type="hidden" name="username" value="${userInfo.userName}"/>
                     <label>E-mail</label>
-                    <input type="email" placeholder="E-mail"  class="input-field" name="email" id="editEmail" value="${userInfo.email}" required/>
-                    <label>Password</label>
-                    <input type="Password" placeholder="Password"  class="input-field" name="password" id="SignupPassword" required/>
-                    <label>Confirm Password</label>
-                    <input type="Password" placeholder="Confirm Password"  class="input-field" id="SignupConfirmPassword" required/>
+                    <input type="email" placeholder="E-mail"  class="input-field" name="email" id="editEmail" value="${userInfo.email}" required readonly/>
+<%--                    <label>Password</label>--%>
+<%--                    <input type="Password" placeholder="Password"  class="input-field" name="password" id="SignupPassword" required readonly/>--%>
 
                     <label>Address</label>
-                    <input type="text" placeholder="Address"  class="input-field" name="address" id="editAddress" value="${userInfo.address}" />
+                    <input type="text" placeholder="Address"  class="input-field" name="address" id="editAddress" value="${userInfo.address}" readonly/>
                     <label>Job</label>
-                    <input type="text" placeholder="Job"  class="input-field" name="job" id="editJob" value="${userInfo.job}"/>
+                    <input type="text" placeholder="Job"  class="input-field" name="job" id="editJob" value="${userInfo.job}" readonly/>
                     <label>Credit Card</label>
-                    <input type="text" placeholder="Credit Card"  class="input-field" name="creditcard" id="SignupCreditCard" value="${userInfo.creditCard}" required/>
+                    <input type="text" placeholder="Credit Card"  class="input-field" name="creditcard" id="SignupCreditCard" value="${userInfo.creditCard}" required readonly/>
                     <input type="hidden" name="id" value="${userInfo.userId}" />
-                    <input type="hidden" name="photo" value="${photoscr}"/>
-
-                    <label>Image</label>
-                    <input type="file" name="image" id="image" accept="image/*"><br/>
-                    <button type="submit" class="btn btn-default" id="editSubmitBtn">Update</button>
+                    <input type="hidden" name="photo" value="${photoscr}" readonly/>
                 </form>
             </div>
         </div><!--/product-details-->

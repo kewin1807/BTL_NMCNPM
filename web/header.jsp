@@ -79,7 +79,7 @@
                                         <li><a href="#"><i class="fa fa-usd"></i> ${LoginUser.cash}</a></li>
                                          <li><a href="ScratchCards.jsp"><i class="fa fa-cc-visa"></i> Charge </a></li>
                                         <li><a href="logout"><i class="fa fa-sign-out"></i> Logout</a></li>
-<%--                                        <script type="text/javascript">var userID = '${LoginUser.userId}';</script>--%>
+                                        <script type="text/javascript">var userID = '${LoginUser.userId}';</script>
                                     </c:if>
                                         
                                     <c:if test="${!empty LoginUser && LoginUser.role =='admin' }">

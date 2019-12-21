@@ -62,7 +62,7 @@ $(document).ready(function() {
       type: "GET",
       data:{},
       success: data => {
-        console.log(data);
+        $("#number_login").html(data);
         $("#number").html(data);
       }
     });
