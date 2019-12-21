@@ -14,10 +14,6 @@ import javaCode.yourcart.beans.User;
 import javaCode.yourcart.model.CartModel;
 import javaCode.yourcart.model.Payment;
 
-/**
- * to proccess pay operation 
- * @author MotYim
- */
 @WebServlet(name = "Pay", urlPatterns = {"/Pay"})
 public class Pay extends HttpServlet {
 
@@ -33,7 +29,8 @@ public class Pay extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        CartModel cartModel = new CartModel();
+//        CartModel cartModel = new CartModel();
+        CartModel cartModel = (CartModel) request.getSession().getAttribute("carts");
         double total = 0;
         String message = "";
         
@@ -41,7 +38,7 @@ public class Pay extends HttpServlet {
         User user = (User) request.getSession().getAttribute("LoginUser");
 
         //get product of user
-        ArrayList<CartProduct> productCart = cartModel.getProductFromCart(user.getUserId());
+        ArrayList<CartProduct> productCart = cartModel.getProductFromCart();
 
         //-------------- Checkes ------------------
         //check  quantity

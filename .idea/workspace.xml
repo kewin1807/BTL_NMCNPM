@@ -8,13 +8,28 @@
   <component name="ChangeListManager">
     <list default="true" id="4a696851-9b02-464e-889f-46c91a606581" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/DbConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/AddCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/AddCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/CartHandlerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/CartHandlerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/DeleteCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/DeleteCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/NumberOFCartsForUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/NumberOFCartsForUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Pay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Pay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/ReduceQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/ReduceQuantity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/increaseQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/increaseQuantity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/filter/CheckLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/filter/CheckLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/CartModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/CartModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/checkout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/addtocart.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/addtocart.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="46" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -59,6 +74,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -181,6 +197,7 @@
       <workItem from="1576087609654" duration="106000" />
       <workItem from="1576136157225" duration="6888000" />
       <workItem from="1576162322371" duration="4958000" />
+      <workItem from="1576925164553" duration="8982000" />
     </task>
     <servers />
   </component>
@@ -192,7 +209,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -200,5 +219,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BTL$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1576144110141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/BTL_NMCNPM$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1576938741190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

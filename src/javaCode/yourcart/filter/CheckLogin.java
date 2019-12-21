@@ -17,11 +17,13 @@ import javaCode.yourcart.beans.User;
  *
  * @author MotYim
  */
-@WebFilter(filterName = "Login",
-        urlPatterns = {"/Profile", "/Profile.jsp", "/addCart", "/CartHandlerServlet",
-            "/ConfirmScratchCardServlet", "/DeleteCart", "/getCartCount", "/Pay",
-            "/ScratchCardServlet", "/logout", "/checkout.jsp", "/ConfirmScratchCard.jsp",
-            "/ScratchCards.jsp"})
+// @WebFilter(filterName = "Login",
+// urlPatterns = {"/Profile", "/Profile.jsp", "/addCart", "/CartHandlerServlet",
+// "/ConfirmScratchCardServlet", "/DeleteCart", "/getCartCount", "/Pay",
+// "/ScratchCardServlet", "/logout", "/checkout.jsp", "/ConfirmScratchCard.jsp",
+// "/ScratchCards.jsp"})
+@WebFilter(filterName = "Login", urlPatterns = { "/Profile", "/Profile.jsp", "/ConfirmScratchCardServlet", "/Pay",
+        "/ScratchCardServlet", "/logout", "/checkout.jsp", "/ConfirmScratchCard.jsp", "/ScratchCards.jsp" })
 public class CheckLogin implements Filter {
 
     public CheckLogin() {
@@ -29,38 +31,36 @@ public class CheckLogin implements Filter {
 
     /**
      *
-     * @param request The servlet request we are processing
+     * @param request  The servlet request we are processing
      * @param response The servlet response we are creating
-     * @param chain The filter chain we are processing
+     * @param chain    The filter chain we are processing
      *
-     * @exception IOException if an input/output error occurs
+     * @exception IOException      if an input/output error occurs
      * @exception ServletException if a servlet error occurs
      */
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response,
-            FilterChain chain)
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-        
+
         HttpServletRequest hreq = (HttpServletRequest) request;
 
-
         User user = (User) hreq.getSession().getAttribute("LoginUser");
-        if (user != null && user.getRole().equalsIgnoreCase("user")) //there is a login user
+        if (user != null && user.getRole().equalsIgnoreCase("user")) // there is a login user
         {
             chain.doFilter(request, response);
         } else {
-            //handle ajax request 
+            // handle ajax request
             String redirectUrl = "login.jsp";
-            //check if request from ajax
+            // check if request from ajax
             if (hreq.getHeader("x-requested-with") != null
                     && hreq.getHeader("x-requested-with").equalsIgnoreCase("XMLHttpRequest")) {
 
-                // Set up response 
+                // Set up response
                 HttpServletResponse hres = (HttpServletResponse) response;
                 hres.setContentType("text/json; charset=UTF-8");
 
                 PrintWriter out = hres.getWriter();
-                //write response as json
+                // write response as json
                 String json = "{\"redirect\":\"" + redirectUrl + "\"}";
 
                 out.write(json);
@@ -69,7 +69,7 @@ public class CheckLogin implements Filter {
 
             } else {
 
-                //redirect to login if not logged 
+                // redirect to login if not logged
                 ((HttpServletResponse) response).sendRedirect(redirectUrl);
             }
         }
