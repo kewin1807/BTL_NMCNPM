@@ -36,6 +36,8 @@ public class Payment extends DbConnection{
                 Product product = new Product();
                 product.setProductId(itemSold.getProductId());
                 product.setQuantity(itemSold.getQuantity_product() - itemSold.getQuantity());
+                product.setSold(itemSold.getQuantity());
+
                 productModel.updateProductQauntity(product);
                 
                 //save proccess in history 
@@ -48,8 +50,7 @@ public class Payment extends DbConnection{
                 new UserHistory().addUserHistory(history, order_id);
             }
 
-            //empty user cart 
-            new CartModel().deleteUserCart();
+            //empty user cart
          
             //commit 
             con.commit();

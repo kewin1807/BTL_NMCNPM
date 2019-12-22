@@ -29,11 +29,11 @@ public class Pay extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException      if an I/O error occurs
      */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        request.getRequestDispatcher("/order.jsp").forward(request, response);
-    }
+//    @Override
+//    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+//            throws ServletException, IOException {
+//        request.getRequestDispatcher("/order.jsp").forward(request, response);
+//    }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -60,6 +60,7 @@ public class Pay extends HttpServlet {
         order.setStatus_id(0);
         Payment payment = new Payment();
         boolean checkOrder = payment.startPayment(user, productCart, order);
+        cartModel.deleteUserCart();
         if (checkOrder) {
             message = "Thanks for buying from YourCart ^_^ <br/>"
                     + "your product will delivered in two days ..";

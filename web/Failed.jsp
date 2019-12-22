@@ -6,7 +6,7 @@
 
     <%@include file="header.jsp" %>
 
-    <section id="form"><!--form-->
+    <section id="form">
         <div class="container">
             <div class="row">
 

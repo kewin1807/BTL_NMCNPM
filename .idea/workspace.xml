@@ -7,28 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a696851-9b02-464e-889f-46c91a606581" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/javaCode/yourcart/beans/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Checkout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/UserHistoryOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9c72ab31-1a9c-4bfd-b273-3a5fa314453d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9c72ab31-1a9c-4bfd-b273-3a5fa314453d.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/item.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/upload/Readme.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/upload/g502mouse.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/beans/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/beans/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/beans/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/beans/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/ConfirmScratchCardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/ConfirmScratchCardServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/beans/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/AddProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Checkout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/IndexProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/IndexProductServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Pay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Pay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/Signup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/filter/CheckLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/filter/CheckLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/CartModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/CartModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/UserDbModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/UserDbModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/UserHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/UserHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/ProductModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Failed.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Failed.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/checkout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/checkout.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/shop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/shop.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +101,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -146,6 +144,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_BTL" />
+        <option name="JNDI_PORT" value="1098" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -238,6 +237,7 @@
       <workItem from="1576162322371" duration="4958000" />
       <workItem from="1576925164553" duration="20321000" />
       <workItem from="1577008045616" duration="9470000" />
+      <workItem from="1577024691894" duration="5868000" />
     </task>
     <servers />
   </component>
@@ -259,6 +259,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BTL$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1576144110141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/BTL_NMCNPM$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1576938741190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/BTL_NMCNPM$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1577024992384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

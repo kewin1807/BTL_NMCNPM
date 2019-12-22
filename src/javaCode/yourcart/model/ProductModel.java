@@ -26,7 +26,7 @@ public class ProductModel {
         try {
             con = db.openConnection();
             System.out.println(con);
-            pst = con.prepareStatement("insert into product(name,price,quantity,model,descriptin,date,category_id,photo) values (?,?,?,?,?,?,?,?)");
+            pst = con.prepareStatement("insert into product(name,price,quantity,model,descriptin,date,category_id,photo,sold) values (?,?,?,?,?,?,?,?,?)");
 
             pst.setString(1, product.getName());
             pst.setDouble(2, product.getPrice());
@@ -36,7 +36,7 @@ public class ProductModel {
             pst.setString(6, product.getDate());
             pst.setInt(7, product.getCategory());
             pst.setString(8, product.getPhoto());
-
+            pst.setInt(9, product.getSold());
             i = pst.executeUpdate();
 
             // pst.close();
@@ -176,21 +176,38 @@ public class ProductModel {
         ArrayList<Product> selectLastProduct = new ArrayList();
         try {
             con = db.openConnection();
-            pst = con.prepareStatement("select * from product ORDER BY id DESC LIMIT 6 ");
+            pst = con.prepareStatement("select * from product ORDER BY date DESC LIMIT 6 ");
             Product obj;
             rs = pst.executeQuery();
             while (rs.next()) {
                 obj = new Product(rs.getString("name"), rs.getDouble("price"), rs.getString("model"), rs.getString("date"), rs.getString("photo"), rs.getString("descriptin"), rs.getInt("quantity"), rs.getInt("id"), rs.getInt("category_id"));
                 selectLastProduct.add(obj);
-
             }
-
         } catch (SQLException ex) {
             db.closeConnection();
             ex.printStackTrace();
         }
         System.out.println(selectLastProduct.size());
         return selectLastProduct;
+    }
+
+    public ArrayList<Product> getBestSellProducts() {
+        ArrayList<Product> bestSellProducts = new ArrayList();
+        try {
+            con = db.openConnection();
+            pst = con.prepareStatement("select * from product ORDER BY sold DESC LIMIT 6 ");
+            Product obj;
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                obj = new Product(rs.getString("name"), rs.getDouble("price"), rs.getString("model"), rs.getString("date"), rs.getString("photo"), rs.getString("descriptin"), rs.getInt("quantity"), rs.getInt("id"), rs.getInt("category_id"));
+                bestSellProducts.add(obj);
+            }
+        } catch (SQLException ex) {
+            db.closeConnection();
+            ex.printStackTrace();
+        }
+        System.out.println(bestSellProducts.size());
+        return bestSellProducts;
     }
 
     public ArrayList<Product> getProductByName(String productName) {
@@ -274,11 +291,11 @@ public class ProductModel {
         
             con = db.openConnection();
             int i = 0;
-            pst = con.prepareStatement("update product set quantity=? where id=?");
+            pst = con.prepareStatement("update product set quantity=?,sold=? where id=?");
 
             pst.setInt(1, product.getQuantity());
-            pst.setInt(2, product.getProductId());
-           
+           pst.setInt(2, product.getSold());
+           pst.setInt(3, product.getProductId());
             i = pst.executeUpdate();
 
             db.closeConnection();

@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 --
 create database yourcart;
 use yourcart;
+
 CREATE TABLE `ads` (
   `id` int(11) NOT NULL,
   `image` varchar(200) CHARACTER SET latin1 NOT NULL,
@@ -110,9 +111,9 @@ CREATE TABLE `history` (
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32;
 
---
+-- --
 -- Dumping data for table `history`
---
+-- --
 
 INSERT INTO `history` (`id`, `user_id`, `product_id`, `date`, `quantity`) VALUES
 (1, 2, 3, '2017-03-15T10:24:43.477', 2);
@@ -202,13 +203,15 @@ INSERT INTO `users` (`id`, `username`, `email`, `address`, `job`, `password`, `c
 (1, 'mohamed', 'mohamed.motyim33@gmail.com', 'alexandria', 'java dev', 'c2a2c8637590d5dd61c457cc1724ecdfa2c47062ec9c584613c099caabbd1ea8d3e4116a8d62e9fe07722dbe6ff382bec09c10fa4019723ae3f1b1286a186684', '1234-1234-1234-1234', 500, 'admin', 'upload/profile.jpg'),
 (2, 'sara', 'sarametwalli93@gmail.com', '18', 'programmer', 'c2a2c8637590d5dd61c457cc1724ecdfa2c47062ec9c584613c099caabbd1ea8d3e4116a8d62e9fe07722dbe6ff382bec09c10fa4019723ae3f1b1286a186684', '9090-9090-9090-9090', 400, 'user', 'upload/profile.jpg');
 
---
--- Indexes for dumped tables
---
+INSERT INTO `users` (`id`, `username`, `email`, `address`, `job`, `password`, `creaditCard`, `cash`, `role`, `photo`) VALUES (3, 'cuong1', 'cuongnh@gmail.com', '18', 'programmer', '7cc3a40e83c5bfaa38412d435f3e7b3909016cf85c8b5d8dfa55b107e75c65d62777c2e2e58e0d9cc4e8df9892e9e713308e12f605799a687d8356c98e00da86', '9090-9090-9090-9093', 400, 'admin', 'upload/profile.jpg');
 
---
--- Indexes for table `ads`
---
+-- --
+-- -- Indexes for dumped tables
+-- --
+
+-- --
+-- -- Indexes for table `ads`
+-- --
 ALTER TABLE `ads`
   ADD PRIMARY KEY (`id`);
 
@@ -233,17 +236,17 @@ ALTER TABLE `category`
 ALTER TABLE `charge`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `history`
---
+-- --
+-- -- Indexes for table `history`
+-- --
 ALTER TABLE `history`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `product_id` (`product_id`);
+ADD PRIMARY KEY (`id`),
+ADD KEY `user_id` (`user_id`),
+ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `product`
---
+-- -- Indexes for table `product`
+-- --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id` (`id`),
@@ -338,7 +341,23 @@ ALTER TABLE `product`
 --
 ALTER TABLE `slides`
   ADD CONSTRAINT `slides_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+create table `orders`(
+id int (11) NOT NULL auto_increment,
+user_id int(11) NOT NULL,
+status_id int (11) NOT NULL,
+address varchar(255) NOT NULL,
+primary key(id),
+FOREIGN KEY (user_id) REFERENCES users(id)
+);
+SET FOREIGN_KEY_CHECKS = 0;
+alter table `history`
+	ADD order_id int(11) NOT NULL,
+    add CONSTRAINT `history_ibfk_3` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
+alter table `users`
+	add phone_number varchar(255);
 
+alter table `product`
+add sold int(11);
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

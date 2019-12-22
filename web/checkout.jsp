@@ -26,12 +26,10 @@
                 </thead>
                 <tbody>
 
-
-
                     <c:set var="total" value="${0}"/>
 
                     <c:if test="${!empty requestScope.carts}">
-                       
+
 
                         <c:forEach items="${requestScope.carts}" var="cart">
                             <tr>
@@ -39,7 +37,7 @@
                                     <a href=""><img src="${cart.photo}" alt=""></a>
                                 </td>
                                 <td class="cart_description">
-                                   
+
                                     <p>Product ID: ${cart.productId}</p>
                                 </td>
                                 <td class="cart_price">
@@ -49,9 +47,9 @@
                                 <td class="cart_quantity">
                                     <div class="cart_quantity_button">
                                         <a class="cart_quantity_up" id="U_${cart.productId}"> + </a>
-                                        <input class="cart_quantity_input" 
+                                        <input class="cart_quantity_input"
                                                type="text" name="quantity" id="V_${cart.productId}"
-                                               value="${cart.quantity}" autocomplete="off" 
+                                               value="${cart.quantity}" autocomplete="off"
                                                size="2" disabled>
 <!--                                        <p>${cart.quantity}</p>-->
                                         <a class="cart_quantity_down" id="D_${cart.productId}" > - </a>
@@ -65,7 +63,7 @@
                                 </td>
                                 <td class="cart_delete">
                                     <INPUT type="hidden" id="hiddenCart" value="${cart.productId}"/>
-                                  
+
                                     <a  href="DeleteCart?id=${cart.productId}"><i class="fa fa-times"></i></a>
                                 </td>
                                 <c:set var="total" value="${total+(cart.price*cart.quantity)}"/>
@@ -84,7 +82,7 @@
                                 </tr>
                                 <tr class="shipping-cost">
                                     <td>Shipping Cost</td>
-                                    <td>Free</td>										
+                                    <td>Free</td>
                                 </tr>
                                 <tr>
                                     <td>Total</td>
@@ -98,10 +96,10 @@
             </table>
         </div>
         <div class="payment-options">
-            <a class="btn btn-primary" href="Checkout">Checkout</a>
+            <a class="btn btn-primary" id="checkout" href="Checkout">Checkout</a>
         </div>
     </div>
 </section> <!--/#cart_items-->
 
-<%-- include footer file --%> 
+<%-- include footer file --%>
 <%@include file="footer.jsp" %>

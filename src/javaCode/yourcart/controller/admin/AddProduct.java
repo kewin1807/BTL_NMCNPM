@@ -78,6 +78,7 @@ public class AddProduct extends HttpServlet {
         productObj.setDiscriptin(description);
         productObj.setQuantity(quantity);
         productObj.setCategory(category);
+        productObj.setSold(0);
 
         //-------------- upload photo ------------------
         Part filePart = request.getPart("image");

@@ -15,6 +15,15 @@ public class Product {
     private int quantity;
     private int productId;
     private int category;
+    private int sold;
+
+    public int getSold() {
+        return sold;
+    }
+
+    public void setSold(int sold) {
+        this.sold = sold;
+    }
 
     public Product() {
     }
