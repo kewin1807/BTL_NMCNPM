@@ -1,7 +1,7 @@
 <%--
     Document   : index
     Created on : Feb 28, 2017, 10:25:09 PM
-    Author     : MotYim
+    Author     : bruno
 --%>
 <%@ page import="javaCode.yourcart.controller.user.IndexProductServlet" %>
 <%--<jsp:include page="/IndexProductServlet"/> --%> 
