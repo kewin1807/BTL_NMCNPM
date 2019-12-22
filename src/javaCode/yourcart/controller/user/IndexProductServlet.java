@@ -2,7 +2,7 @@ package javaCode.yourcart.controller.user;
 
 /**
  * display leates product in index
- * @author sara metwalli
+ * @author bruno
  */
 import javax.servlet.*;
 import javax.servlet.http.HttpServlet;
@@ -19,14 +19,13 @@ import javaCode.yourcart.model.ProductModel;
 public class IndexProductServlet extends HttpServlet {
 
     List<Product> limitedProducts = new ArrayList<Product>();
+    List<Product> bestSellProducts = new ArrayList<Product>();
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         ProductModel productModel = new ProductModel();
         limitedProducts = productModel.getLastProduct();
-         
-        request.setAttribute("limitedProducts",limitedProducts );
-
-
+        bestSellProducts = productModel.getBestSellProducts();
+        request.setAttribute("limitedProducts", limitedProducts );
+        request.setAttribute("bestSellProducts", bestSellProducts );
     }
 }

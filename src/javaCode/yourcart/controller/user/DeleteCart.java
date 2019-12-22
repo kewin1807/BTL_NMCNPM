@@ -8,30 +8,37 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javaCode.yourcart.model.CartModel;
+import javax.servlet.http.HttpSession;
 
+import javaCode.yourcart.model.CartModel;
 
 /**
  * delete cart from user cart in DB
+ * 
  * @author OsamaPC & sara
  */
 @WebServlet("/DeleteCart")
 public class DeleteCart extends HttpServlet {
- CartModel cartModel;
-   
+    CartModel cartModel;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        cartModel = new CartModel();
+
+        if (request.getSession().getAttribute("carts") != null) {
+            cartModel = (CartModel) request.getSession().getAttribute("carts");
+        } else {
+            cartModel = new CartModel();
+        }
         int id = Integer.parseInt(request.getParameter("id"));
-       
-        boolean addCart = cartModel.deleteCart(id);
+
+        cartModel.deleteCart(id);
 
         String nextJSP = "/CartHandlerServlet";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
         dispatcher.include(request, response);
+        HttpSession session = request.getSession(true);
+        session.setAttribute("carts", cartModel);
     }
 
-    
 }

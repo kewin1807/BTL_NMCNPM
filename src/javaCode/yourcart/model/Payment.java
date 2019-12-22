@@ -12,10 +12,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-/**
- * make payment transaction proccess
- * @author MotYim
- */
 public class Payment extends DbConnection{
 
     public Payment() {

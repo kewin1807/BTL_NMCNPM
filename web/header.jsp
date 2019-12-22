@@ -1,7 +1,7 @@
 <%-- 
     Document   : header
     Created on : Feb 28, 2017, 10:13:51 PM
-    Author     : MotYim
+    Author     : bruno
 --%>
 
 <!DOCTYPE html>
@@ -75,7 +75,7 @@
                                 <ul class="nav navbar-nav">
                                     <c:if test="${!empty LoginUser && LoginUser.role =='user' }">
                                         <li><a href="Profile"><i class="fa fa-user"></i> ${LoginUser.userName}</a></li>
-                                        <li><a href="CartHandlerServlet"><i class="fa fa-shopping-cart"></i> Cart (<span id="number"></span> )</a></li>
+                                        <li><a href="CartHandlerServlet"><i class="fa fa-shopping-cart"></i> Cart (<span id="number_login"></span> )</a></li>
                                         <li><a href="#"><i class="fa fa-usd"></i> ${LoginUser.cash}</a></li>
                                          <li><a href="ScratchCards.jsp"><i class="fa fa-cc-visa"></i> Charge </a></li>
                                         <li><a href="logout"><i class="fa fa-sign-out"></i> Logout</a></li>
@@ -88,6 +88,7 @@
                                     </c:if>
 
                                     <c:if test="${empty LoginUser}">
+                                        <li><a href="CartHandlerServlet"><i class="fa fa-shopping-cart"></i> Cart (<span id="number"></span> )</a></li>
                                         <li><a href="login.jsp"><i class="fa fa-sign-in"></i> Signup</a></li>
                                         <li><a href="login.jsp"><i class="fa fa-lock"></i> Login</a></li>
                                     </c:if> 

@@ -35,9 +35,6 @@
 
                         <c:forEach items="${requestScope.carts}" var="cart">
                             <tr>
-
-
-
                                 <td class="cart_product">
                                     <a href=""><img src="${cart.photo}" alt=""></a>
                                 </td>
@@ -47,31 +44,29 @@
                                 </td>
                                 <td class="cart_price">
 
-                                    <p id="P_${cart.cartId}">$${cart.price}</p>
+                                    <p id="P_${cart.productId}">$${cart.price}</p>
                                 </td>
                                 <td class="cart_quantity">
                                     <div class="cart_quantity_button">
-                                        <a class="cart_quantity_up" id="U_${cart.cartId}"> + </a>
+                                        <a class="cart_quantity_up" id="U_${cart.productId}"> + </a>
                                         <input class="cart_quantity_input" 
-                                               type="text" name="quantity" id="V_${cart.cartId}"
+                                               type="text" name="quantity" id="V_${cart.productId}"
                                                value="${cart.quantity}" autocomplete="off" 
                                                size="2" disabled>
 <!--                                        <p>${cart.quantity}</p>-->
-                                        <a class="cart_quantity_down" id="D_${cart.cartId}" > - </a>
+                                        <a class="cart_quantity_down" id="D_${cart.productId}" > - </a>
                                     </div>
                                 </td>
                                 <td class="cart_total">
-                                    <p class="cart_total_price"  id="T_${cart.cartId}">
+                                    <p class="cart_total_price"  id="T_${cart.productId}">
                                             $${cart.price*cart.quantity}
                                     </p>
 
                                 </td>
                                 <td class="cart_delete">
-                                    <INPUT type="hidden" id="hiddenCart" value="${cart.cartId}"/>
+                                    <INPUT type="hidden" id="hiddenCart" value="${cart.productId}"/>
                                   
-                                    <a  href="DeleteCart?id=${cart.cartId}"><i class="fa fa-times"></i></a>
-                         
-
+                                    <a  href="DeleteCart?id=${cart.productId}"><i class="fa fa-times"></i></a>
                                 </td>
                                 <c:set var="total" value="${total+(cart.price*cart.quantity)}"/>
                             </tr>
