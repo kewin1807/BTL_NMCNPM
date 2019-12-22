@@ -23,8 +23,6 @@
                         <div class="view-product">
                             <img src="${LoginUser.photo}" id="imageView" alt="" />
                         </div>
-
-
                     </div>
                     <div class="col-sm-8">
                         <div class="product-information"><!--/product-information-->
@@ -56,11 +54,6 @@
                         </div><!--/product-information-->
                     </div>
                 </div><!--/product-details-->
-
-
-
-
-
             </div>
         </div>
     </div>

@@ -37,6 +37,7 @@
                         <input type="text" placeholder="Address" id="SignupAddress" name="SignupAddress" required/>
                         <input type="text" placeholder="Job" id="SignupJob" name="SignupJob" required/>
                         <input type="text" placeholder="CreditCard" id="SignupCreditCard" name="SignupCreditCard" required/>
+                        <input type="text" placeholder="phoneNumber" id="phoneNumber" name="phoneNumber" required/>
                         
 
                         <!--validate password-->

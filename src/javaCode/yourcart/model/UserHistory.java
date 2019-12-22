@@ -83,17 +83,16 @@ public class UserHistory extends DbConnection{
         }
     }
 
-    public boolean addUserHistory(History s) throws SQLException {
+    public boolean addUserHistory(History s, int orderId) throws SQLException {
         con = openConnection();
         PreparedStatement pst = null;
-        
             System.out.println("my con" + con);
-            pst = con.prepareStatement("insert into history (user_id,product_id,date,quantity)Values (?,?,?,?)");
+            pst = con.prepareStatement("insert into history (user_id,product_id,date,quantity,order_id)Values (?,?,?,?,?)");
             pst.setInt(1, s.getUserId());
             pst.setInt(2, s.getProductId());
             pst.setString(3, s.getData());
             pst.setInt(4, s.getQuantity());
-
+            pst.setInt(5, orderId);
             int executeUpdate = pst.executeUpdate();
             closeConnection();
             if (executeUpdate > 0) {
@@ -103,7 +102,7 @@ public class UserHistory extends DbConnection{
         return false;
     }
 
-   
+
 
    
 }

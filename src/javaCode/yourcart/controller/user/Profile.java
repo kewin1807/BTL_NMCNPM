@@ -13,10 +13,6 @@ import javax.servlet.http.Part;
 import javaCode.yourcart.beans.User;
 import javaCode.yourcart.model.UserDbModel;
 
-/**
- * handle display and edit profile 
- * @author MotYim
- */
 @MultipartConfig
 @WebServlet(name = "Profile", urlPatterns = {"/Profile"})
 public class Profile extends HttpServlet {

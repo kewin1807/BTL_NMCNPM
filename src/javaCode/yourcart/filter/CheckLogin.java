@@ -22,7 +22,7 @@ import javaCode.yourcart.beans.User;
 // "/ConfirmScratchCardServlet", "/DeleteCart", "/getCartCount", "/Pay",
 // "/ScratchCardServlet", "/logout", "/checkout.jsp", "/ConfirmScratchCard.jsp",
 // "/ScratchCards.jsp"})
-@WebFilter(filterName = "Login", urlPatterns = { "/Profile", "/Profile.jsp", "/ConfirmScratchCardServlet", "/Pay",
+@WebFilter(filterName = "Login", urlPatterns = { "/Profile", "/Profile.jsp", "/ConfirmScratchCardServlet", "/Pay", "/Checkout",
         "/ScratchCardServlet", "/logout", "/checkout.jsp", "/ConfirmScratchCard.jsp", "/ScratchCards.jsp" })
 public class CheckLogin implements Filter {
 

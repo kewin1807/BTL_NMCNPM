@@ -38,6 +38,7 @@ public class Signup extends HttpServlet {
         String job = request.getParameter("SignupJob");
         String address = request.getParameter("SignupAddress");
         String creditCrd = request.getParameter("SignupCreditCard");
+        String phoneNumber = request.getParameter("phoneNumber");
         
         //-------------- create user object ------------------
         User user = new User();
@@ -48,7 +49,8 @@ public class Signup extends HttpServlet {
         user.setRole("user");
         user.setAddress(address);
         user.setCreditCard(creditCrd);
-        user.setCash(0); 
+        user.setCash(1000000000);
+        user.setPhoneNumber(phoneNumber);
    
         if(new UserDbModel().signUp(user)){
             request.setAttribute("message", "You signup successfully");

@@ -48,22 +48,8 @@ public class CartModel extends DbConnection {
         items.remove(index_cart);
     }
 
-    public boolean deleteUserCart(int userID) {
-        con = openConnection();
-        PreparedStatement pst = null;
-        try {
-            //System.out.println("my con" + con);
-            pst = con.prepareStatement("delete From cart where user_id=?");
-            pst.setInt(1, userID);
-            int executeUpdate = pst.executeUpdate();
-            closeConnection();
-            if (executeUpdate > 0) {
-                return true;
-            }
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        return false;
+    public void deleteUserCart() {
+       items.removeAll(items);
     }
 
     private int search(int pID) {

@@ -51,8 +51,8 @@ public class UserDbModel{
             try {
                 con = db.openConnection();
 
-                PreparedStatement pst1 = con.prepareStatement("INSERT into users (username,email,address, password,job,creaditCard,cash,role)"
-                        + "values (?,?,?,?,?,?,?,?)");
+                PreparedStatement pst1 = con.prepareStatement("INSERT into users (username,email,address, password,job,creaditCard,cash,role,phone_number)"
+                        + "values (?,?,?,?,?,?,?,?,?)");
 
                 pst1.setString(1, bean.getUserName());
                 pst1.setString(2, bean.getEmail());
@@ -62,7 +62,7 @@ public class UserDbModel{
                 pst1.setString(6, bean.getCreditCard());
                 pst1.setDouble(7, bean.getCash());
                 pst1.setString(8, bean.getRole());
-                
+                pst1.setString(9,bean.getPhoneNumber());
 
                 pst1.executeUpdate();
                 pst1.close();

@@ -36,7 +36,6 @@ public class ConfirmScratchCardServlet extends HttpServlet {
        // boolean notused = chModel.checkCardValidation(CardStr);
         System.out.println("exx "+ exist );
         if (exist ) {
-
             try {
                 int value = chModel.getValuefromNumber(CardStr);
                 chModel.setCardUsed(CardStr);

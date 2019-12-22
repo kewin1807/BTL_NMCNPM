@@ -54,7 +54,6 @@
 </div>
 </section> <!--/#cart_items-->
 
-
 <%-- include footer file --%> 
 <%@include file="footer.jsp" %>
 <%-- include notify file --%> 
