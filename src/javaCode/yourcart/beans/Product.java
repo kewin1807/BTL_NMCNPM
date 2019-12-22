@@ -16,8 +16,7 @@ public class Product {
     private int productId;
     private int category;
 
-    public Product() {
-    }
+    public Product() {}
 
     public Product(int productId) {
         this.productId = productId;

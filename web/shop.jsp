@@ -27,11 +27,6 @@
 
     </div><!--features_items-->
 
-
-
-
-
-
     <ul class="pagination">
         <%--handel Category--%>
         <c:if test="${not empty query}">

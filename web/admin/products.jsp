@@ -24,7 +24,6 @@
     <div class="table-responsive cart_info">
         <table class="table table-condensed">
             <thead>
-
                 <tr class="cart_menu">
                     <td class="image">Item</td>
                     <td class="description"></td>

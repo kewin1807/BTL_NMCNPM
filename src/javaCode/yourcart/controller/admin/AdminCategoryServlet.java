@@ -29,14 +29,10 @@ public class AdminCategoryServlet extends HttpServlet {
         //System.out.println(allCategory.get(0).getName());
         //System.out.println(allCategory.size());
         request.setAttribute("allCategorysAdmin", allCategory);
-
         String nextJSP = "/admin/category.jsp";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
         dispatcher.forward(request, response);
-       
     }
-
-
 
     @Override
     public String getServletInfo() {

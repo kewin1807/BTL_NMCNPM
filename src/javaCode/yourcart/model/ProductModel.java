@@ -88,9 +88,7 @@ public class ProductModel {
     }
 
     public boolean deleteProduct(int id, String path) {
-
         try {
-
             int i = 0;
             Product product = getProduct(id);
             boolean deleteFile = FileUpload.deleteFile(product.getPhoto(), path);
@@ -128,9 +126,7 @@ public class ProductModel {
                         rs.getString("descriptin"), rs.getInt("quantity"), rs.getInt("id"),
                         rs.getInt("category_id"));
                 list.add(p);
-
             }
-
         } catch (SQLException ex) {
             db.closeConnection();
             ex.printStackTrace();
@@ -141,7 +137,6 @@ public class ProductModel {
 
     public Product getProduct(int productId) {
         Product productObject = new Product();// to return value of select
-
         try {
             con = db.openConnection();
 
@@ -162,14 +157,11 @@ public class ProductModel {
                 db.closeConnection();
                 return productObject;
             }
-
         } catch (SQLException ex) {
             db.closeConnection();
             ex.printStackTrace();
         }
-
         return null;
-
     }
 
     public ArrayList<Product> getLastProduct() {

@@ -41,7 +41,6 @@ public class AdminCategory extends HttpServlet {
         System.out.println("---> " + categoryobj.getName());
         if ( new CategoryModel().addCategory(categoryobj))
         {
-           
             //set alert message
             request.getSession().setAttribute("AlertMessage", "Category Added Successfully");
             //set alert type
@@ -56,9 +55,6 @@ public class AdminCategory extends HttpServlet {
             request.getSession().setAttribute("AlertType", "danger");
             response.sendRedirect("AdminCategoryServlet");
         }
-        
-        
-      
     }
 
     /**
