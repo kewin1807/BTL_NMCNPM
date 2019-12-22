@@ -202,24 +202,23 @@ public class ProductModel {
         return bestSellProducts;
     }
 
-    public ArrayList<Product> getProductByName(String productName) {
+    public ArrayList<Product> getProductBySearch(String search) {
          ArrayList<Product> ListProductByName = new ArrayList();
         try { 
             con = db.openConnection();
-            pst = con.prepareStatement("SELECT * FROM product WHERE name LIKE ? ESCAPE '!'");
-            productName = productName.replace("!", "!!")
+            pst = con.prepareStatement("SELECT * FROM product WHERE name LIKE ? OR model LIKE ? ESCAPE '!'");
+            search = search.replace("!", "!!")
                                      .replace("%", "!%")
                                      .replace("_", "!_")
                                      .replace("[", "![");
-            pst.setString(1, productName + "%");
+            pst.setString(1, "%" + search + "%");
+            pst.setString(2, "%" + search + "%");
             Product obj;
             rs = pst.executeQuery();
             while (rs.next()) {
                 obj = new Product(rs.getString("name"), rs.getDouble("price"), rs.getString("model"), rs.getString("date"), rs.getString("photo"), rs.getString("descriptin"), rs.getInt("quantity"), rs.getInt("id"), rs.getInt("category_id"));
                 ListProductByName.add(obj);
-
             }
-
         } catch (SQLException ex) {
             db.closeConnection();
             ex.printStackTrace();
