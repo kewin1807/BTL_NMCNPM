@@ -7,8 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a696851-9b02-464e-889f-46c91a606581" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/order.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/order.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -222,7 +223,7 @@
       <workItem from="1577069673854" duration="19128000" />
       <workItem from="1577117314464" duration="996000" />
       <workItem from="1577118713545" duration="6685000" />
-      <workItem from="1577126748167" duration="1410000" />
+      <workItem from="1577126748167" duration="1738000" />
     </task>
     <servers />
   </component>

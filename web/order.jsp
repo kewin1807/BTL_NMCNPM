@@ -261,36 +261,39 @@
         //     $("#cardPayment").style.display = "block";
         // });
         $("#myForm").on('submit', function(e){
+            e.preventDefault();
             if(!$("#checkPayment").val()){
-                return alert("You need to choose a payment way");
+                 alert("You need to choose a payment way");
             }
             if($("#adr").val() == "" || $("#district").val() == "" || $("#province").val()){
-                return alert("You need to write address");
+                 alert("You need to write address");
+            }else{
+                var addressOrder =
+                    $("#adr").val() +
+                    ", " +
+                    $("#district").val() +
+                    ", " +
+                    $("#province").val();
+                console.log(addressOrder);
+                $.ajax({
+                    url: "Pay", //servlet url
+                    type: "POST",
+                    data: {address: addressOrder},
+                    success: data => {
+                    console.log(data);
+                if (data.redirect) {
+                    // data.redirect contains the string URL to redirect to
+                    window.location.href = data.redirect;
+                } else {
+                    showNotification("Order Product Success", "success");
+                }
             }
-            e.preventDefault();
-            var addressOrder =
-                $("#adr").val() +
-                ", " +
-                $("#district").val() +
-                ", " +
-                $("#province").val();
-            console.log(addressOrder);
-            $.ajax({
-                url: "Pay", //servlet url
-                type: "POST",
-                data: {address: addressOrder},
-                success: data => {
-                console.log(data);
-            if (data.redirect) {
-                // data.redirect contains the string URL to redirect to
-                window.location.href = data.redirect;
-            } else {
-                showNotification("Order Product Success", "success");
+            })
+                ;
+            })
             }
-        }
-        })
-            ;
-        });
+
+
     });
 
 </script>

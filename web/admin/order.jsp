@@ -265,39 +265,42 @@
         //     $("#cardPayment").style.display = "block";
         // });
         $("#myForm").on('submit', function(e){
-            if(!$("#checkPayment").val()){
-                return alert("You need to choose a payment way");
-            }
-            if($("#adr").val() == "" || $("#district").val() == "" || $("#province").val()){
-                return alert("You need to write address");
-            }
-            if(!$("#selectUser").val()){
-                return alert("You need choose a user");
-            }
             e.preventDefault();
-            var addressOrder =
-                $("#adr").val() +
-                ", " +
-                $("#district").val() +
-                ", " +
-                $("#province").val();
-            console.log(addressOrder);
-            $.ajax({
-                url: "admin/PayAdmin", //servlet url
-                type: "POST",
-                data: {address: addressOrder, user_id: $("#selectUser").val()},
-                success: data => {
-                console.log(data);
-            if (data.redirect) {
-                // data.redirect contains the string URL to redirect to
-                window.location.href = data.redirect;
-            } else {
-                showNotification("Order Product Success", "success");
+            if(!$("#checkPayment").val()){
+                 alert("You need to choose a payment way");
             }
-        }
-        })
-            ;
-        });
+            else if($("#adr").val() == "" || $("#district").val() == "" || $("#province").val()){
+                alert("You need to write address");
+            }
+            else if(!$("#selectUser").val()){
+                alert("You need choose a user");
+            }
+            else{
+                var addressOrder =
+                    $("#adr").val() +
+                    ", " +
+                    $("#district").val() +
+                    ", " +
+                    $("#province").val();
+                console.log(addressOrder);
+                $.ajax({
+                    url: "admin/PayAdmin", //servlet url
+                    type: "POST",
+                    data: {address: addressOrder, user_id: $("#selectUser").val()},
+                    success: data => {
+                    console.log(data);
+                if (data.redirect) {
+                    // data.redirect contains the string URL to redirect to
+                    window.location.href = data.redirect;
+                } else {
+                    showNotification("Order Product Success", "success");
+                }
+            }
+            })
+                ;
+            });
+            }
+
     });
 
 </script>
