@@ -8,7 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4a696851-9b02-464e-889f-46c91a606581" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/orderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/orderDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/DeleteProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/DeleteProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/ProductModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/item.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/item.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +122,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 8.5.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 8.5.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.46" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="BTL:war exploded">
@@ -225,6 +229,7 @@
       <workItem from="1577024691894" duration="8307000" />
       <workItem from="1577041459132" duration="1414000" />
       <workItem from="1577069673854" duration="19128000" />
+      <workItem from="1577107731507" duration="5279000" />
     </task>
     <servers />
   </component>
@@ -245,7 +250,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/BTL$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1576144110141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/BTL_NMCNPM$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1577024992384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/BTL$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1576144110141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

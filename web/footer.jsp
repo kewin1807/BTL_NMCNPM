@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
->>>>>>> bruno
 <footer id="footer"><!--Footer-->
     <div class="footer-top">
         <div class="container">
