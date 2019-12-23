@@ -34,19 +34,26 @@ public class CategoryModel {
         return b;
     }
 
-    public void updateCategory(Category updateCat) {
+    public boolean updateCategory(Category updateCat) {
         try {
+            int i = 0;
             con = db.openConnection();
             PreparedStatement pst = con.prepareStatement("update category set name=? where id=? ");
             pst.setString(1, updateCat.getName());
             pst.setInt(2, updateCat.getId());
-            pst.executeUpdate();
+            i = pst.executeUpdate();
+            db.closeConnection();
+            if (i > 0) {
+                return true;
+            }
         } catch (SQLException ex) {
+            db.closeConnection();
             Logger.getLogger(CategoryModel.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return false;
     }
 
-    public ArrayList<Category> AllCategoriess() {
+    public ArrayList<Category> AllCategories() {
         ArrayList<Category> AllCategory = new ArrayList<>();
         try {
             con = db.openConnection();

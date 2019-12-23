@@ -42,7 +42,6 @@
                             </td>
                             <td class="cart_description">
                                 <p>${product.name}</p>
-                                
                             </td>
                             <td class="cart_price">
                                 <h4>$${product.price}</h4>
@@ -53,7 +52,7 @@
                             <td class="cart_delete">
                                 <a class="cart_quantity_delete" href="DeleteProduct?id=${product.productId}"><i class="fa fa-times"></i></a>
                                 <a class="cart_quantity_delete" href="AdminProduct?id=${product.productId}"><i class="fa fa-pencil"></i></a>
-                                <a class="cart_quantity_delete" href="AddSlider?id=${product.productId}"><i class="fa fa-star"></i></a>
+<%--                                <a class="cart_quantity_delete" href="AddSlider?id=${product.productId}"><i class="fa fa-star"></i></a>--%>
                             </td>
                         </tr>
                     </c:forEach>

@@ -30,7 +30,7 @@
                             </td>
                             <td class="cart_delete">
                                 <a class="cart_quantity_delete" href="DeleteCategory?id=${category.id}"><i class="fa fa-times"></i></a>
-                                <a class="cart_quantity_delete" href="AdminProduct?id=${category.id}"><i class="fa fa-pencil"></i></a>
+                                <a class="cart_quantity_delete" href="AdminCategory?id=${category.id}"><i class="fa fa-pencil"></i></a>
                             </td>
                         </tr>
                     </c:forEach>
