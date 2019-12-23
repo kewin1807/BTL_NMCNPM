@@ -1,11 +1,3 @@
-<%-- 
-    Document   : products
-    Created on : Feb 28, 2017, 11:39:20 PM
-    Author     : MotYim
---%>
-
-<%-- include header file --%>
-
 <%@ page import="javaCode.yourcart.controller.admin.AdminProductServlet" %>
 <%@include file="header.jsp" %>
 
@@ -24,7 +16,6 @@
     <div class="table-responsive cart_info">
         <table class="table table-condensed">
             <thead>
-
                 <tr class="cart_menu">
                     <td class="image">Item</td>
                     <td class="description"></td>
@@ -43,7 +34,6 @@
                             </td>
                             <td class="cart_description">
                                 <p>${product.name}</p>
-                                
                             </td>
                             <td class="cart_price">
                                 <h4>$${product.price}</h4>
@@ -54,7 +44,7 @@
                             <td class="cart_delete">
                                 <a class="cart_quantity_delete" href="DeleteProduct?id=${product.productId}"><i class="fa fa-times"></i></a>
                                 <a class="cart_quantity_delete" href="AdminProduct?id=${product.productId}"><i class="fa fa-pencil"></i></a>
-                                <a class="cart_quantity_delete" href="AddSlider?id=${product.productId}"><i class="fa fa-star"></i></a>
+<%--                                <a class="cart_quantity_delete" href="AddSlider?id=${product.productId}"><i class="fa fa-star"></i></a>--%>
                             </td>
                         </tr>
                     </c:forEach>
@@ -63,6 +53,33 @@
 
             </tbody>
         </table>
+
+        <ul class="pagination">
+
+            <%--to display Previous arrow except for the 1st page --%>
+            <c:if test="${currentPageAdmin != 1}">
+                <li><a href="AdminProductServlet?page=${currentPageAdmin - 1}">&laquo;</a></li>
+            </c:if>
+
+            <%--to displaying Page numbers--%>
+            <c:forEach begin="1" end="${noOfPagesAdmin}" var="i">
+                <c:choose>
+                    <c:when test="${currentPageAdmin == i}">
+                        <li class="active"><a href="">${i}</a></li>
+                    </c:when>
+                    <c:otherwise>
+                        <li><a href="AdminProductServlet?page=${i}">${i}</a></li>
+
+                    </c:otherwise>
+                </c:choose>
+            </c:forEach>
+
+            <%--to display Next arrow --%>
+            <c:if test="${currentPageAdmin lt noOfPagesAdmin}">
+                <li><a href="AdminProductServlet?page=${currentPageAdmin + 1}">&raquo;</a></li>
+            </c:if>
+        </ul>
+
     </div>
 
 </div>

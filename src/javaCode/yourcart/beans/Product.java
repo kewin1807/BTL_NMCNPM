@@ -25,8 +25,7 @@ public class Product {
         this.sold = sold;
     }
 
-    public Product() {
-    }
+    public Product() {}
 
     public Product(int productId) {
         this.productId = productId;

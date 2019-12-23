@@ -18,25 +18,21 @@ import javaCode.yourcart.model.CategoryModel;
 @WebServlet(name = "AdminCategoryServlet", urlPatterns = {"/admin/AdminCategoryServlet"})
 public class AdminCategoryServlet extends HttpServlet {
       
-            ArrayList<Category> allCategory = new ArrayList<>();
+            ArrayList<Category> allCategories = new ArrayList<>();
    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         System.out.println("servlet");
         CategoryModel categorymodel = new CategoryModel();
-        allCategory= categorymodel.AllCategoriess();
+        allCategories= categorymodel.AllCategories();
         //System.out.println(allCategory.get(0).getName());
         //System.out.println(allCategory.size());
-        request.setAttribute("allCategorysAdmin", allCategory);
-
+        request.setAttribute("allCategorysAdmin", allCategories);
         String nextJSP = "/admin/category.jsp";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
         dispatcher.forward(request, response);
-       
     }
-
-
 
     @Override
     public String getServletInfo() {

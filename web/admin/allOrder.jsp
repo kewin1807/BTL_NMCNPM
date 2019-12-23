@@ -21,7 +21,7 @@
                 <td class="description">date</td>
                 <td class="quantity">status</td>
                 <td class="description">address</td>
-                <td class="quantity"></td>
+                <td class="cart_delete"></td>
             </tr>
             </thead>
             <tbody>
@@ -34,7 +34,7 @@
                             <img src="../${order.user_photo}">
                         </td>
                         <td class="cart_description">
-                            <p>${order.user_name == null ? "Chưa cập nhật" : order.user_name}</p>
+                            <p>${order.user_name == null ? "Not update" : order.user_name}</p>
 
                         </td>
                         <td class="cart_quantity">
@@ -47,7 +47,7 @@
                             <p>${order.date}</p>
                         </td>
                         <td class="cart_description">
-                            <p>${order.status_id == 0 ? "Đang chờ" : order.status == 1 ? "Huỷ" : "Hoàn thành"}</p>
+                            <p>${order.status_id == 0 ? "Pending" : order.status == 1 ? "Cancel" : "Done"}</p>
                         </td>
                         <td class="cart_description">
                             <p>${order.address}</p>

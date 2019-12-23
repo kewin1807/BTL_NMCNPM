@@ -16,35 +16,27 @@ import javaCode.yourcart.model.ProductModel;
  */
 public class SearchForProduct extends HttpServlet {
 
-    ArrayList<Product> product = new ArrayList<>();
+    ArrayList<Product> products = new ArrayList<>();
     ProductModel model = new ProductModel();
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         if (request.getParameter("search") != null) {
-            String productName = request.getParameter("search");
-
-            System.out.println(productName);
-
-            product = model.getProductByName(productName);
-
-            System.out.println(product.size());
-
+            String search = request.getParameter("search");
+            products = model.getProductBySearch(search);
         } else {
-            System.out.println("else");
             int min = Integer.parseInt(request.getParameter("down"));
             System.out.println(min);
             int max = Integer.parseInt(request.getParameter("up"));
             System.out.println(max);
 
-            product = model.getAllProductByPrice(min, max);
-            System.out.println("sizeof product" + product.size());
+            products = model.getAllProductByPrice(min, max);
+            System.out.println("sizeof product" + products.size());
 
         }
 
-        request.setAttribute("allProducts", product);
+        request.setAttribute("allProducts", products);
         String nextJSP = "/shop.jsp";
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
