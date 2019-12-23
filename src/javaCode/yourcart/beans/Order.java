@@ -3,8 +3,20 @@ package javaCode.yourcart.beans;
 public  class Order {
     private int user_id;
     private int order_id;
+    private String date;
     private int status_id;
     private String address;
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+
+
 
     public int getUser_id() {
         return user_id;

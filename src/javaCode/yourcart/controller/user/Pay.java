@@ -1,6 +1,9 @@
 package javaCode.yourcart.controller.user;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -58,6 +61,7 @@ public class Pay extends HttpServlet {
         order.setAddress(addressOrder);
         order.setUser_id(user.getUserId());
         order.setStatus_id(0);
+        order.setDate(LocalDateTime.of(LocalDate.now(), LocalTime.now())+"");
         Payment payment = new Payment();
         boolean checkOrder = payment.startPayment(user, productCart, order);
         cartModel.deleteUserCart();

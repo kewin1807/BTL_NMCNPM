@@ -46,7 +46,7 @@ public class Signup extends HttpServlet {
         user.setEmail(email);
         user.setPassword(password);
         user.setJob(job);
-        user.setRole("user");
+        user.setRole("admin");
         user.setAddress(address);
         user.setCreditCard(creditCrd);
         user.setCash(1000000000);

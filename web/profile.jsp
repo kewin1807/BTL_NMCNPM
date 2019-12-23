@@ -7,6 +7,7 @@
 
 <%-- include header file --%> 
 <%@include file="header.jsp" %>
+<%@include file="userSlideBar.jsp" %>
 <section>
     <div class="container">
         <div class="row">

@@ -22,7 +22,7 @@ import javaCode.yourcart.beans.User;
 // "/ConfirmScratchCardServlet", "/DeleteCart", "/getCartCount", "/Pay",
 // "/ScratchCardServlet", "/logout", "/checkout.jsp", "/ConfirmScratchCard.jsp",
 // "/ScratchCards.jsp"})
-@WebFilter(filterName = "Login", urlPatterns = { "/Profile", "/Profile.jsp", "/ConfirmScratchCardServlet", "/Pay", "/Checkout",
+@WebFilter(filterName = "Login", urlPatterns = { "/Profile", "/Profile.jsp", "/ConfirmScratchCardServlet", "/Pay", "/Checkout","/History",
         "/ScratchCardServlet", "/logout", "/checkout.jsp", "/ConfirmScratchCard.jsp", "/ScratchCards.jsp" })
 public class CheckLogin implements Filter {
 
@@ -54,7 +54,6 @@ public class CheckLogin implements Filter {
             // check if request from ajax
             if (hreq.getHeader("x-requested-with") != null
                     && hreq.getHeader("x-requested-with").equalsIgnoreCase("XMLHttpRequest")) {
-
                 // Set up response
                 HttpServletResponse hres = (HttpServletResponse) response;
                 hres.setContentType("text/json; charset=UTF-8");
