@@ -167,7 +167,10 @@
 
                                     <select id="selectUser">
                                         <c:forEach items="${requestScope.users}" var="user">
-                                                <option value="${user.userId}">${user.userName} - ${user.email}</option>
+                                                <c:if test="${user.role == 'user'}">
+                                                    <option value="${user.userId}">${user.userName} - ${user.email}</option>
+                                                </c:if>
+
                                         </c:forEach>
                                     </select>
 
@@ -258,18 +261,12 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        // $("#paymentNormal").addEventListener("click", function (e) {
-        //     $("#cardPayment").style.display = "none";
-        // })
-        // $("#cardPayment").addEventListener("click", function (e) {
-        //     $("#cardPayment").style.display = "block";
-        // });
         $("#myForm").on('submit', function(e){
             e.preventDefault();
-            // if(!document.getElementById('checkPayment').value){
-            //      alert("You need to choose a payment way");
-            //      return;
-            // }
+            if(!document.getElementById('paymentNormal').checked && !document.getElementById('paymentCard').checked){
+                 alert(document.getElementById('paymentNormal').checked);
+                 return;
+            }
             if($("#adr").val() == "" || $("#district").val() == "" || $("#province").val() == ""){
                 alert("You need to write address");
                 return;
