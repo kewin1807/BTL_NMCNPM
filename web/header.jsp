@@ -83,6 +83,7 @@
                                     </c:if>
                                         
                                     <c:if test="${!empty LoginUser && LoginUser.role =='admin' }">
+                                        <li><a href="CartHandlerAdmin"><i class="fa fa-shopping-cart"></i> Cart (<span id="number_admin"></span> )</a></li>
                                         <li><a href="admin"><i class="fa fa-cog"></i> Admin Panel</a></li>
                                         <li><a href="admin/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
                                     </c:if>

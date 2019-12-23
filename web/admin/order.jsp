@@ -1,4 +1,5 @@
-<%@include file="header.jsp" %>
+
+<%@include file="../header.jsp" %>
 <style>
     body {
         font-family: Arial;
@@ -59,6 +60,7 @@
         display: block;
     }
 
+
     .icon-container {
         margin-bottom: 20px;
         padding: 7px 0;
@@ -93,6 +95,26 @@
         float: right;
         color: grey;
     }
+    .select-style {
+        border: 1px solid #ccc;
+        width: 120px;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .select-style select {
+        padding: 5px 8px;
+        width: 130%;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        background-image: none;
+        -webkit-appearance: none;
+    }
+
+    .select-style select:focus {
+        outline: none;
+    }
 
     /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
     @media (max-width: 800px) {
@@ -113,33 +135,6 @@
                     <div class="row">
                         <div class="col-50">
                             <h3>Billing Address</h3>
-                            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                            <input
-                                    type="text"
-                                    id="fname"
-                                    name="firstname"
-                                    placeholder="John M. Doe"
-                                    value="${LoginUser.userName}"
-                                    required
-                            />
-                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                            <input
-                                    type="text"
-                                    id="email"
-                                    name="email"
-                                    placeholder="john@example.com"
-                                    value="${LoginUser.email}"
-                                    required
-                            />
-                            <label for="email"><i class="fa fa-phone"></i> Phone</label>
-                            <input
-                                    type="text"
-                                    id="phone"
-                                    name="phone"
-                                    placeholder="0858798182"
-                                    value="${LoginUser.phoneNumber}"
-                                    required
-                            />
                             <label for="adr"
                             ><i class="fa fa-address-card-o"></i> Address</label
                             >
@@ -148,7 +143,6 @@
                                     id="adr"
                                     name="address"
                                     placeholder="542 W. 15th Street"
-                                    value="${LoginUser.address}"
                                     required
                             />
                             <label for="province"
@@ -169,6 +163,16 @@
                                     name="District"
                                     placeholder="Quan Thanh Xuan"
                             />
+                            <c:if test="${!empty requestScope.users }">
+
+                                    <select id="selectUser">
+                                        <c:forEach items="${requestScope.users}" var="user">
+                                                <option value="${user.userId}">${user.userName} - ${user.email}</option>
+                                        </c:forEach>
+                                    </select>
+
+                            </c:if>
+
                         </div>
                         <div class="col-50">
                             <h3>Payment</h3>
@@ -176,20 +180,20 @@
                                 <input
                                         type="radio"
                                         name="data"
-                                        onclick="paymentNormal()"
+                                        onclick=""
                                         id="paymentNormal"
                                 />
                                 Receive Money when order done <br/>
                                 <input
                                         type="radio"
                                         name="data"
-                                        onclick="paymentCard()"
+                                        onclick=""
                                         id="paymentCard"
                                 />
                                 Payment by credit card <br/>
                             </div>
                             <div id="cardPayment" style="display: block">
-                                <label for="fname">Accepted Cards</label>
+                                <%--@declare id="fname"--%><label for="fname">Accepted Cards</label>
                                 <div class="icon-container">
                                     <i class="fa fa-cc-visa" style="color:navy;"></i>
                                     <i class="fa fa-cc-amex" style="color:blue;"></i>
@@ -245,7 +249,7 @@
                             id="button-submit"
                             class="btn"
                     >
-                        Continue to checkout
+                    Continue to checkout
                 </form>
             </div>
         </div>
@@ -267,6 +271,9 @@
             if($("#adr").val() == "" || $("#district").val() == "" || $("#province").val()){
                 return alert("You need to write address");
             }
+            if(!$("#selectUser").val()){
+                return alert("You need choose a user");
+            }
             e.preventDefault();
             var addressOrder =
                 $("#adr").val() +
@@ -276,9 +283,9 @@
                 $("#province").val();
             console.log(addressOrder);
             $.ajax({
-                url: "Pay", //servlet url
+                url: "admin/PayAdmin", //servlet url
                 type: "POST",
-                data: {address: addressOrder},
+                data: {address: addressOrder, user_id: $("#selectUser").val()},
                 success: data => {
                 console.log(data);
             if (data.redirect) {
@@ -295,4 +302,4 @@
 
 </script>
 
-<%@include file="footer.jsp" %>
+<%@include file="../footer.jsp" %>

@@ -7,7 +7,10 @@
 <%@include file="slidebar.jsp" %>
 <div class="col-sm-9 padding-right">
 
-    <h2>History</h2>
+    <h2>History
+        <a class="btn btn-default" style="float: right;" href="../">Create Order</a>
+    </h2>
+
 
     <div class="table-responsive cart_info">
         <table class="table table-condensed">

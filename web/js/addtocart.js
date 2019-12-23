@@ -42,6 +42,7 @@ $(document).ready(function() {
         } else {
           $("#number_login").html(data);
           $("#number").html(data);
+          $("#number_admin").html(data);
           showNotification("product add to your cart", "success");
         }
       },
@@ -64,6 +65,8 @@ $(document).ready(function() {
       success: data => {
         $("#number_login").html(data);
         $("#number").html(data);
+        $("#number_admin").html(data);
+
       }
     });
   }
@@ -81,6 +84,7 @@ $(document).ready(function() {
         } else {
           $("#number_login").html(data);
           $("#number").html(data);
+          $("#number_admin").html(data);
           showNotification(
             "product Quantity decrease from your cart",
             "success"
@@ -104,6 +108,7 @@ $(document).ready(function() {
         } else {
           $("#number_login").html(data);
           $("#number").html(data);
+          $("#number_admin").html(data);
           showNotification("product Quantity increase to your cart", "success");
           reCalculateIncrease(id);
         }
