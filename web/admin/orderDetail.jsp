@@ -1,5 +1,5 @@
 
-<%@ page import="javaCode.yourcart.controller.admin.AdminProductServlet" %>
+
 <%@include file="header.jsp" %>
 
 <%-- include slidebar file --%>
@@ -8,10 +8,16 @@
 <div class="col-sm-9 padding-right">
     <c:if test="${!empty requestScope.order}">
         <h2>Order ${requestScope.order.order_id}</h2>
-        <h3>Customer: ${requestScope.order.username}</h3>
+        <input id="order_id" style="display: none" value="${requestScope.order.order_id}"/>
+        <h3>Customer: ${requestScope.order.user_name}</h3>
         <p>Address: ${requestScope.order.address}</p>
-
-        <p>Status: ${order.status_id == 0 ? "Pending" : order.status == 1 ? "Cancel" : "Done"}</p>
+        <p>Status Order :</p>
+        <select name='role' id="status">
+            <option value="0" ${order.status_id == 0 ? 'selected="selected"' : ''}>Pending</option>
+            <option value="1" ${order.status_id == 1 ? 'selected="selected"' : ''}>Cancel</option>
+            <option value="2" ${order.status_id == 2 ? 'selected="selected"' : ''}>Done</option>
+        </select>
+        <%--        <p>Status: ${requestScope.order.status_id == 0 ? "Pending" : requestScope.order.status == 1 ? "Cancel" : "Done"}</p>--%>
     </c:if>
 
     <div class="table-responsive cart_info">
@@ -51,10 +57,35 @@
 
             </tbody>
         </table>
+
+    </div>
+    <div class="payment-options">
+        <a class="btn btn-primary" id="update">Update</a>
     </div>
 
 </div>
 </div>
 </div>
 </section>
-<%--<%@include file="notify.jsp" %>--%>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#update").click(function(){
+            $.ajax({
+                url:"UpdateOrder",
+                type: "GET",
+                data:{status_id: $("#status").val(), order_id: $("#order_id").val()},
+                success: data => {
+                    if (data.redirect) {
+                        window.location.href = data.redirect;
+                    }
+                    else{
+                        alert("Order Update Success", "success");
+                    }
+                }
+            })
+        });
+    });
+
+</script>
+<%@include file="../footer.jsp" %>

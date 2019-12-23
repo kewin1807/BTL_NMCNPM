@@ -133,5 +133,47 @@ public class UserHistoryOrder extends DbConnection {
         closeConnection();
         return products;
     }
+    public void updateProductOrder(ArrayList<CartProduct> carts) throws SQLException {
+        con = openConnection();
+        PreparedStatement pstProduct = null;
+        pstProduct = con.prepareStatement("UPDATE product set quantity=quantity+?,sold=sold-? where id=?");
+        for (CartProduct cartProduct : carts) {
+            pstProduct.setInt(1, cartProduct.getQuantity());
+            pstProduct.setInt(2, cartProduct.getQuantity());
+            pstProduct.setInt(3, cartProduct.getProductId());
+            pstProduct.executeQuery();
+        }
+        closeConnection();
+
+    }
+    public boolean updateOrder(ArrayList<CartProduct> carts, int status_id, int order_id) throws SQLException {
+        con = openConnection();
+        PreparedStatement pst = null;
+        if(status_id == 0){
+            return true;
+        }
+        else if(status_id == 2){
+            pst = con.prepareStatement("update orders set status_id=? where orders.id=?");
+            pst.setInt(1, status_id);
+            pst.setInt(2, order_id);
+            int executeUpdate = pst.executeUpdate();
+            closeConnection();
+            if(executeUpdate > 0){
+                return true;
+            }
+        }
+        else{
+            pst = con.prepareStatement("update orders set status_id=? where orders.id=?");
+            pst.setInt(1, status_id);
+            pst.setInt(2, order_id);
+            int executeUpdate = pst.executeUpdate();
+            closeConnection();
+            if(executeUpdate > 0){
+                updateProductOrder(carts);
+                return true;
+            }
+        }
+        return false;
+    }
 
 }

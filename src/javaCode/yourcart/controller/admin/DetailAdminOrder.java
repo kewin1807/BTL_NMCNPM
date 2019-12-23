@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import javaCode.yourcart.beans.*;
 import javaCode.yourcart.beans.Product;
@@ -30,10 +31,13 @@ public class DetailAdminOrder extends HttpServlet {
             e.printStackTrace();
         }
         for(CartProduct cart: products){
-            System.out.println("product_id" + cart.getProductId());
+            System.out.println("product_id_admin" + cart.getProductId());
         }
         request.setAttribute("order", orderUser);
         request.setAttribute("products", products);
+        HttpSession session = request.getSession(true);
+        session.setAttribute("productOrders", products);
+        session.setMaxInactiveInterval(60*15);
 
         request.getRequestDispatcher("/admin/orderDetail.jsp").forward(request, response);
     }
