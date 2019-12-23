@@ -14,9 +14,8 @@
 
 <jsp:include page="AdminIndex"/>
 
-
     <div class="col-sm-9 padding-right">
-        <p>Online Users : ${onlineUser} | profit : ${profit}</p>
+<%--        <p>Online Users : ${onlineUser} | profit : ${profit}</p>--%>
         <div class="features_items">
            <div class="col-sm-4">
                 <div class="product-image-wrapper">

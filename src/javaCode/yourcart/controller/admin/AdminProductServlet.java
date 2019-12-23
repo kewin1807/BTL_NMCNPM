@@ -29,7 +29,7 @@ public class AdminProductServlet extends HttpServlet {
 
         //-------------- handle paging ------------------
         int pageid = 1;
-        int totalPerPage = 9;
+        int totalPerPage = 5;
         int start;
 
         if (request.getParameter("page") != null) {

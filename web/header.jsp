@@ -1,9 +1,3 @@
-<%-- 
-    Document   : header
-    Created on : Feb 28, 2017, 10:13:51 PM
-    Author     : bruno
---%>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,8 +35,8 @@
                         <div class="col-sm-6">
                             <div class="contactinfo">
                                 <ul class="nav nav-pills">
-                                    <li><a href="#"><i class="fa fa-phone"></i> +2 0111 47 88 16</a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i> info@staticcart.com</a></li>
+                                    <li><a href="#"><i class="fa fa-phone"></i> 0941439925</a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i> tientai.nguyen.1501@gmail.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -66,7 +60,7 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="logo pull-left">
-                                <a href="index.jsp"><img src="images/home/logo.png" alt="" /></a>
+                                <a href="index.jsp"><img src="images/home/luxy.png" alt="Avatar" style="border-radius: 50%"/></a>
                             </div>
 
                         </div>

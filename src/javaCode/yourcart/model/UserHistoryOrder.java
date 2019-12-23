@@ -19,6 +19,7 @@ public class UserHistoryOrder extends DbConnection {
     ResultSet rs = null;
     // DbConnection db = new DbConnection();
     Connection con;
+    private int noOfRecords ;
 
     public int addUserOrder(Order o) {
         int order_id = -1;
@@ -48,14 +49,19 @@ public class UserHistoryOrder extends DbConnection {
         }
         return order_id;
     }
-    public ArrayList<OrderUser> getAllOrder() throws SQLException {
+
+    public int getNoOfRecords() {
+        return noOfRecords;
+    }
+
+    public ArrayList<OrderUser> getAllOrder(int start , int limit) throws SQLException {
         ArrayList<OrderUser> orders = new ArrayList<OrderUser>();
         con = openConnection();
-        PreparedStatement pst = null;
-        pst = con.prepareStatement("select orders.id, orders.date,orders.address,orders.status_id,users.photo,users.id,users.username from orders join users on orders.user_id = users.id");
+        PreparedStatement pst = con.prepareStatement("select orders.id, orders.date,orders.address,orders.status_id,users.photo,users.id,users.username from orders join users on orders.user_id = users.id order by orders.id desc limit ?, ?");
+        pst.setInt(1, start);
+        pst.setInt(2, limit);
         ResultSet rs = pst.executeQuery();
         while (rs.next()) {
-            System.out.println("order_id" + rs.getInt(1));
             OrderUser order = new OrderUser();
             order.setOrder_id(rs.getInt(1));
             order.setDate(rs.getString(2));
@@ -66,8 +72,43 @@ public class UserHistoryOrder extends DbConnection {
             order.setUser_name(rs.getString(7));
             orders.add(order);
         }
+        rs = con.prepareStatement("SELECT count(*) FROM orders").executeQuery();
+        if(rs.next()){
+            this.noOfRecords = rs.getInt(1);
+        }
         closeConnection();
         return orders;
+//        ArrayList<Order> orders = new ArrayList();
+//        try {
+//            con = db.openConnection();
+//            pst = con.prepareStatement("select * from product ORDER BY id DESC LIMIT ? , ?");
+//            pst.setInt(1, start);
+//            pst.setInt(2, limit);
+//            Product p;
+//            rs = pst.executeQuery();
+//
+//            while (rs.next()) {
+//                p = new Product(rs.getString("name"), rs.getDouble("price"),
+//                        rs.getString("model"), rs.getString("date"), rs.getString("photo"),
+//                        rs.getString("descriptin"), rs.getInt("quantity"), rs.getInt("id"),
+//                        rs.getInt("category_id"));
+//                list.add(p);
+//
+//            }
+//
+//            //get number of record in DB
+//            rs = con.prepareStatement("SELECT count(*) FROM product").executeQuery();
+//            if(rs.next()){
+//                this.noOfRecords = rs.getInt(1);
+//            }
+//
+//
+//        } catch (SQLException ex) {
+//            db.closeConnection();
+//            ex.printStackTrace();
+//        }
+//        System.out.println(list.size());
+//        return list;
     }
 
     public ArrayList<Order> getAllOrderByUser(int user_id) throws SQLException {

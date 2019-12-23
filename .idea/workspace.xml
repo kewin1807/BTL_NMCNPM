@@ -6,17 +6,23 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a696851-9b02-464e-889f-46c91a606581" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/UpdateOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9c72ab31-1a9c-4bfd-b273-3a5fa314453d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9c72ab31-1a9c-4bfd-b273-3a5fa314453d.xml" afterDir="false" />
+    <list default="true" id="4a696851-9b02-464e-889f-46c91a606581" name="Default Changelist" comment="Merge branch 'master' of github.com:hoangtubatu123/BTL_NMCNPM into bruno&#10;&#10;# Conflicts:&#10;#&#9;.DS_Store&#10;#&#9;.idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/DetailAdminOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/DetailAdminOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/AdminAllOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/AdminAllOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/AdminProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/AdminProductServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/UserHistoryOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/UserHistoryOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/admin/allOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/allOrder.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/orderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/orderDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/products.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/slidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/slidebar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/orderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/orderDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/home/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/upload/yourCart.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/upload/yourCart.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +44,30 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc/yourcart" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc/yourcart" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc/yourcart" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="yourcart: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc/yourcart" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="yourcart: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="orders: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -207,6 +236,7 @@
       <workItem from="1577069673854" duration="19128000" />
       <workItem from="1577107731507" duration="5279000" />
       <workItem from="1577119123365" duration="683000" />
+      <workItem from="1577120422559" duration="5835000" />
     </task>
     <servers />
   </component>

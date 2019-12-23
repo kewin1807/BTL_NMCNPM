@@ -9,10 +9,6 @@
     <h2>Products
         <a class="btn btn-default" style="float: right;" href="addproduct.jsp">New Product</a>
     </h2>
-
-
-
-
     <div class="table-responsive cart_info">
         <table class="table table-condensed">
             <thead>
@@ -56,12 +52,10 @@
 
         <ul class="pagination">
 
-            <%--to display Previous arrow except for the 1st page --%>
             <c:if test="${currentPageAdmin != 1}">
                 <li><a href="AdminProductServlet?page=${currentPageAdmin - 1}">&laquo;</a></li>
             </c:if>
 
-            <%--to displaying Page numbers--%>
             <c:forEach begin="1" end="${noOfPagesAdmin}" var="i">
                 <c:choose>
                     <c:when test="${currentPageAdmin == i}">
@@ -74,7 +68,6 @@
                 </c:choose>
             </c:forEach>
 
-            <%--to display Next arrow --%>
             <c:if test="${currentPageAdmin lt noOfPagesAdmin}">
                 <li><a href="AdminProductServlet?page=${currentPageAdmin + 1}">&raquo;</a></li>
             </c:if>
