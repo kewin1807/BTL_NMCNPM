@@ -188,7 +188,7 @@
                                 />
                                 Payment by credit card <br/>
                             </div>
-                            <div id="cardPayment" style="display: none">
+                            <div id="cardPayment" style="display: block">
                                 <label for="fname">Accepted Cards</label>
                                 <div class="icon-container">
                                     <i class="fa fa-cc-visa" style="color:navy;"></i>
@@ -253,14 +253,13 @@
 </section>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript">
-    function paymentNormal() {
-        $("#cardPayment").style.display = "none";
-    }
-
-    function paymentCard() {
-        $("#cardPayment").style.display = "block";
-    }
     $(document).ready(function () {
+        // $("#paymentNormal").addEventListener("click", function (e) {
+        //     $("#cardPayment").style.display = "none";
+        // })
+        // $("#cardPayment").addEventListener("click", function (e) {
+        //     $("#cardPayment").style.display = "block";
+        // });
         $("#myForm").on('submit', function(e){
             e.preventDefault();
             var addressOrder =

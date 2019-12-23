@@ -47,7 +47,7 @@
                             <p>${order.date}</p>
                         </td>
                         <td class="cart_description">
-                            <p>${order.status_id == 0 ? "Pending" : order.status == 1 ? "Cancel" : "Done"}</p>
+                            <p>${order.status_id == 0 ? "Pending" : order.status_id == 1 ? "Cancel" : "Done"}</p>
                         </td>
                         <td class="cart_description">
                             <p>${order.address}</p>

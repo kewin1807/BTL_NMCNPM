@@ -15,7 +15,7 @@
 <div class="col-sm-9 padding-right">
     <c:if test="${!empty requestScope.order}">
         <p>Customer: ${requestScope.order.user_name}</p>
-        <img src="../${order.user_photo}">
+        <img src="../${requestScope.order.user_photo}" style="width: 100px; height: 100px">
         <h2>Order ${requestScope.order.order_id}</h2>
         <p>Address: ${requestScope.order.address}</p>
         <p>Status: ${order.status_id == 0 ? "Pending" : order.status == 1 ? "Cancel" : "Done"}</p>
