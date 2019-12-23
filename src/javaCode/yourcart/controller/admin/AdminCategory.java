@@ -10,10 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javaCode.yourcart.beans.Category;
 import javaCode.yourcart.model.CategoryModel;
 
-/**
- * add category
- * @author Nesmaa
- */
+
 @WebServlet("/admin/AdminCategory")
 public class AdminCategory extends HttpServlet {
 
