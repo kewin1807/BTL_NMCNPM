@@ -49,7 +49,7 @@
                     <img src="images/home/new.png" class="new" alt="" />
                 </c:when>
                 <c:when test="${requestScope.status==1}">
-                    <img src="images/home/new.png" class="new" alt="" />
+                    <img src="images/home/best.png" class="new" alt="" style="width: 42px; height: 42px"/>
                 </c:when>
             </c:choose>
 

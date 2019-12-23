@@ -18,7 +18,7 @@ public class DeleteProduct extends HttpServlet {
 
         int id = Integer.parseInt(request.getParameter("id"));
         String path = request.getServletContext().getRealPath("");
-        if (new ProductModel().deleteProduct(id,path)) {
+        if (new ProductModel().deleteProduct(id, path)) {
             //redirect to Success
              //set alert message
             request.getSession().setAttribute("AlertMessage", "Product Deleted Successfully");

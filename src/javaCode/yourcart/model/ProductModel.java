@@ -1,5 +1,5 @@
 package javaCode.yourcart.model;
-
+import javaCode.yourcart.beans.Order;
 import javaCode.yourcart.beans.Product;
 import javaCode.yourcart.utilize.FileUpload;
 
@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductModel {
-
     ResultSet rs;
     PreparedStatement pst = null;
     DbConnection db = new DbConnection();
@@ -22,7 +21,6 @@ public class ProductModel {
     public boolean addProduct(Product product) {
         System.out.println("addp");
         int i = 0;
-
         try {
             con = db.openConnection();
             System.out.println(con);
@@ -84,22 +82,38 @@ public class ProductModel {
             ex.printStackTrace();
         }
         return false;
+    }
 
+    public boolean isRemovable(Product product) throws SQLException {
+        if(product.getQuantity() > 0) return false;
+        ArrayList<Order> orders = new ArrayList<>();
+        con = db.openConnection();
+        pst = con.prepareStatement("select orders.id from product join history on product.id = history.product_id join orders on history.order_id = orders.id where orders.status_id=0 and product.id=?");
+        pst.setInt(1, product.getProductId());
+        rs = pst.executeQuery();
+        int i = 0;
+        while (rs.next()) {
+            new Product(rs.getInt("orders.id"));
+            i++;
+        }
+        String tmp = Integer.toString(i);
+        System.out.println("isRemovable " + tmp);
+        if(i > 0) return false;
+        return true;
     }
 
     public boolean deleteProduct(int id, String path) {
         try {
             int i = 0;
             Product product = getProduct(id);
-            boolean deleteFile = FileUpload.deleteFile(product.getPhoto(), path);
-            System.out.println(product.getPhoto());
-            System.out.println("osama" + deleteFile);
-            if (deleteFile) {
+            if(isRemovable(product)){
+                System.out.println("deleteProduct");
+                System.out.println(product.getPhoto());
+                System.out.println("deleteFile");
                 con = db.openConnection();
                 pst = con.prepareStatement("delete from product where id=?");
                 pst.setInt(1, id);
                 i = pst.executeUpdate();
-
                 db.closeConnection();
                 if (i > 0) {
                     return true;
@@ -109,7 +123,6 @@ public class ProductModel {
             db.closeConnection();
             ex.printStackTrace();
         }
-
         return false;
     }
 
