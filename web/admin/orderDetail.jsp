@@ -8,8 +8,10 @@
 <div class="col-sm-9 padding-right">
     <c:if test="${!empty requestScope.order}">
         <h2>Order ${requestScope.order.order_id}</h2>
+        <h3>Customer: ${requestScope.order.username}</h3>
         <p>Address: ${requestScope.order.address}</p>
-        <p>Status: ${order.status_id == 0 ? "Đang cho" : order.status == 1 ? "Huy" : "Hoan thanh"}</p>
+
+        <p>Status: ${order.status_id == 0 ? "Pending" : order.status == 1 ? "Cancel" : "Done"}</p>
     </c:if>
 
     <div class="table-responsive cart_info">
@@ -30,7 +32,7 @@
                 <c:forEach items="${requestScope.products}" var="product">
                     <tr>
                         <td class="cart_product">
-                            <a href=""><img src="${product.photo}" alt=""></a>
+                            <a href=""><img src="../${product.photo}" alt=""></a>
                         </td>
                         <td class="cart_description">
                             <p>${product.name}</p>

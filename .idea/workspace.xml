@@ -7,29 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a696851-9b02-464e-889f-46c91a606581" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/DeleteCategory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/beans/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/beans/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/beans/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/AdminCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/AdminCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/AdminCategoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/AdminCategoryServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/AdminProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/AdminProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/DeleteProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/admin/DeleteProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/SearchForProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/controller/user/SearchForProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/customtag/CartCategoryTagHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/customtag/CartCategoryTagHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/customtag/SelectCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/customtag/SelectCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/CategoryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/CategoryModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaCode/yourcart/model/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaCode/yourcart/model/ProductModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/addcategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/addcategory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/allOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/allOrder.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/category.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/products.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/orderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/orderDetail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/shop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/shop.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/slidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/slidebar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/orderDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin/orderDetail.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +224,7 @@
       <workItem from="1577008045616" duration="9470000" />
       <workItem from="1577024691894" duration="8307000" />
       <workItem from="1577041459132" duration="1414000" />
-      <workItem from="1577069673854" duration="18881000" />
+      <workItem from="1577069673854" duration="19128000" />
     </task>
     <servers />
   </component>
