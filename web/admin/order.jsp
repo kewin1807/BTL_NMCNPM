@@ -266,16 +266,19 @@
         // });
         $("#myForm").on('submit', function(e){
             e.preventDefault();
-            if(!$("#checkPayment").val()){
-                 alert("You need to choose a payment way");
-            }
-            else if($("#adr").val() == "" || $("#district").val() == "" || $("#province").val()){
+            // if(!document.getElementById('checkPayment').value){
+            //      alert("You need to choose a payment way");
+            //      return;
+            // }
+            if($("#adr").val() == "" || $("#district").val() == "" || $("#province").val() == ""){
                 alert("You need to write address");
+                return;
             }
-            else if(!$("#selectUser").val()){
+            if(!$("#selectUser").val()){
                 alert("You need choose a user");
+                return;
             }
-            else{
+
                 var addressOrder =
                     $("#adr").val() +
                     ", " +
@@ -299,7 +302,7 @@
             })
                 ;
             });
-            }
+
 
     });
 
