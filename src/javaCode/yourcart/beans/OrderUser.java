@@ -7,9 +7,21 @@ public class OrderUser {
     private int user_id;
     private String user_photo;
     private String user_name;
+    private int status_id;
+
+    public int getStatus_id() {
+        return status_id;
+    }
+
+    public void setStatus_id(int status_id) {
+        this.status_id = status_id;
+    }
 
     public void setDate(String date) {
         this.date = date;
+    }
+    public String getDate(){
+        return date;
     }
 
     public String getAddress() {
@@ -49,7 +61,6 @@ public class OrderUser {
     public String getUser_name() {
         return user_name;
     }
-
     public void setUser_name(String user_name) {
         this.user_name = user_name;
     }

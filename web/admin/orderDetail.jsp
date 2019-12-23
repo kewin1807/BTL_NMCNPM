@@ -1,22 +1,15 @@
-<%--
-    Document   : products
-    Created on : Feb 28, 2017, 11:39:20 PM
-    Author     : MotYim
---%>
-
-<%-- include header file --%>
 
 <%@ page import="javaCode.yourcart.controller.admin.AdminProductServlet" %>
-<%@include file="admin/header.jsp" %>
+<%@include file="header.jsp" %>
 
 <%-- include slidebar file --%>
-<%@include file="userSlideBar.jsp" %>
+<%@include file="slidebar.jsp" %>
 
 <div class="col-sm-9 padding-right">
     <c:if test="${!empty requestScope.order}">
         <h2>Order ${requestScope.order.order_id}</h2>
         <p>Address: ${requestScope.order.address}</p>
-        <p>Status: ${order.status_id == 0 ? "Đang chờ" : order.status == 1 ? "Huỷ" : "Hoàn thành"}</p>
+        <p>Status: ${order.status_id == 0 ? "Đang cho" : order.status == 1 ? "Huy" : "Hoan thanh"}</p>
     </c:if>
 
     <div class="table-responsive cart_info">
@@ -62,5 +55,4 @@
 </div>
 </div>
 </section>
-
-
+<%--<%@include file="notify.jsp" %>--%>

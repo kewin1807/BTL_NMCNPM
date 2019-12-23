@@ -48,21 +48,22 @@ public class UserHistoryOrder extends DbConnection {
         }
         return order_id;
     }
-
-    public ArrayList<Order> getAllOrder() throws SQLException {
-        ArrayList<Order> orders = new ArrayList<Order>();
+    public ArrayList<OrderUser> getAllOrder() throws SQLException {
+        ArrayList<OrderUser> orders = new ArrayList<OrderUser>();
         con = openConnection();
         PreparedStatement pst = null;
-        pst = con.prepareStatement("select * from orders");
+        pst = con.prepareStatement("select orders.id, orders.date,orders.address,orders.status_id,users.photo,users.id,users.username from orders join users on orders.user_id = users.id");
         ResultSet rs = pst.executeQuery();
         while (rs.next()) {
             System.out.println("order_id" + rs.getInt(1));
-            Order order = new Order();
+            OrderUser order = new OrderUser();
             order.setOrder_id(rs.getInt(1));
-            order.setUser_id(rs.getInt(2));
-            order.setStatus_id(rs.getInt(3));
-            order.setAddress(rs.getString(4));
-            order.setDate(rs.getString(5));
+            order.setDate(rs.getString(2));
+            order.setAddress(rs.getString(3));
+            order.setStatus_id(rs.getInt(4));
+            order.setUser_photo(rs.getString(5));
+            order.setUser_id(rs.getInt(6));
+            order.setUser_name(rs.getString(7));
             orders.add(order);
         }
         closeConnection();
